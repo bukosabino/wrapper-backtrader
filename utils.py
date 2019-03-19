@@ -10,7 +10,7 @@ def run_strategy(cerebro):
     # Run over everything
     strats = cerebro.run()
 
-    _show_config_settings()
+    _show_config_settings(CONFIG)
 
     # Print out the final result
     _show_backtest_end(cerebro.broker)
@@ -35,8 +35,8 @@ def add_analyzers(cerebro):
     # cerebro.addanalyzer(btanalyzers.TimeReturn, _name='time_return')
     return cerebro
 
-def _show_config_settings():
-    print(CONFIG)
+def _show_config_settings(config):
+    print(config)
 
 def _show_backtest_init(broker):
     print('Initial Portfolio Value: %.2f' % broker.getvalue())

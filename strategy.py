@@ -1,10 +1,13 @@
 import backtrader as bt
 
+
+
 class Strategy(bt.Strategy):
 
     def __init__(self):
         # Keep a reference to the "close" line in the data[0] dataseries
         self.dataclose = self.datas[0].close
+
         # To keep track of pending orders and buy price/commission
         self.order = None
         self.buyprice = None
@@ -18,6 +21,19 @@ class Strategy(bt.Strategy):
     def next(self):
         # Simply log the closing price of the series from the reference
         # self.log('Close, %.2f' % self.dataclose[0])
+        pass
+
+    def buy(self):
+        from settings import CONFIG
+
+        self.log('BUY CREATE, %.2f' % self.dataclose[0])
+        self.order = super(Strategy, self).buy(size=CONFIG['size'])
+
+    def sell(self):
+        from settings import CONFIG
+
+        self.log('SELL CREATE, %.2f' % self.dataclose[0])
+        self.order = super(Strategy, self).sell(size=CONFIG['size'])
 
     def notify_order(self, order):
         if order.status in [order.Submitted, order.Accepted]:

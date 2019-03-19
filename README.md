@@ -1,6 +1,8 @@
-# Basic Trading Strategies
+# Backtrader Wrapper
 
-Some basic trading strategies implemented using Backtrader
+It is a personal Backtrader wrapper to implement trading strategies.
+
+Also, you can find some example strategies implemented.
 
 # How to use (python 3.7)
 
@@ -8,7 +10,16 @@ Some basic trading strategies implemented using Backtrader
 $ virtualenv -p python3.7 env
 $ source env/bin/activate
 $ pip install -r requirements.txt
-$ python strategies/bbands.py or python strategies/bbands_sideway.py
+$ python run.py
 ```
 
-TODO: Implement Sortino Ratio like a new analyzer.
+# Advanced use
+
+You can modify the `settings.py` file.
+
+
+TODO:
+
+* Implement Sortino Ratio like a new analyzer on Backtrader.
+* pep8 linter(flake8)
+* codecov
