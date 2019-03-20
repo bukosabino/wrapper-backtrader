@@ -33,6 +33,13 @@ class AberrationSideway(Strategy):
     def next(self):
         super(AberrationSideway, self).next()
 
+        # Check if an order is pending ... if yes, we cannot send a 2nd one
+        if self.order:
+            return
+
+        if self.orefs:
+            return
+            
         if self.dataclose < self.bband.lines.bot and not self.position:
             self.redline = True
 

@@ -5,8 +5,7 @@ from settings import CONFIG
 
 cerebro = bt.Cerebro()
 
-# Microsoft data input
-# Acciones de Microsoft como entrada de datos
+# Data input
 data = bt.feeds.YahooFinanceData(dataname=CONFIG['asset'],
                                  fromdate=CONFIG['init_date'],
                                  todate=CONFIG['end_date'])

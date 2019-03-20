@@ -26,6 +26,9 @@ class Aberration(Strategy):
         if self.order:
             return
 
+        if self.orefs:
+            return
+
         if self.dataclose < self.bband.lines.bot and not self.position:
             self.buy()
 
