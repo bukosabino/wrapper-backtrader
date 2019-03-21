@@ -24,7 +24,8 @@ settings.CONFIG.
 
 
 # TODO:
-
+* Communication module with Darwinex: https://github.com/darwinex/dwx-zeromq-connector/
++ Communication module with IB
 * Implement Sortino Ratio like a new analyzer on Backtrader.
 * pep8 linter(flake8)
 * codecov
