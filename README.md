@@ -23,7 +23,7 @@ After, you would need import the name strategy on the parameter 'strategy' in
 settings.CONFIG.
 
 
-TODO:
+# TODO:
 
 * Implement Sortino Ratio like a new analyzer on Backtrader.
 * pep8 linter(flake8)
