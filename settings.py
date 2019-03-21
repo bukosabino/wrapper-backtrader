@@ -6,7 +6,7 @@ from strategies import (Aberration,
 
 CONFIG = {
     'init_date': datetime(2011, 1, 1),
-    'end_date': datetime(2017, 12, 31),
+    'end_date': datetime(2013, 12, 31),
     'asset': 'MSFT',
     'data_freq': 'daily',
     'capital_base': 100000.0,
@@ -14,14 +14,13 @@ CONFIG = {
     'size': 500,
     'log': False,
     'take_profit': {
-        'enabled': False,
+        'enabled': True,
         'value': 0.01,
     },
     'stop_loss': {
-        'enabled': False,
+        'enabled': True,
         'value': 0.02,
     },
-    
     'strategy': Aberration
 }
 

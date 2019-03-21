@@ -15,7 +15,12 @@ $ python run.py
 
 # Advanced use
 
-You can modify the `settings.py` file.
+You can modify the `settings.py` file to run strategies with different
+configurations.
+
+You can program your own strategy on a new file in `strategies` folder.
+After, you would need import the name strategy on the parameter 'strategy' in
+settings.CONFIG.
 
 
 TODO:

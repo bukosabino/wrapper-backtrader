@@ -39,7 +39,7 @@ class AberrationSideway(Strategy):
 
         if self.orefs:
             return
-            
+
         if self.dataclose < self.bband.lines.bot and not self.position:
             self.redline = True
 
@@ -54,3 +54,5 @@ class AberrationSideway(Strategy):
 
         if self.dataclose < self.bband.lines.mid and self.position and self.blueline:
             self.sell()
+            self.blueline = False
+            self.redline = False
