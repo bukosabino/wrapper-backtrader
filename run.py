@@ -11,7 +11,8 @@ data = bt.feeds.YahooFinanceData(dataname=CONFIG['asset'],
                                  todate=CONFIG['end_date'])
 cerebro.adddata(data)
 
-cerebro.addstrategy(CONFIG['strategy'])
+for strat in CONFIG['strategy']:
+    cerebro.addstrategy(strat)
 
 # Analyzer
 cerebro = add_analyzers(cerebro)
