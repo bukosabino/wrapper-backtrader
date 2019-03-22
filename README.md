@@ -25,10 +25,12 @@ settings.CONFIG.
 
 # TODO:
 
-* ML utils
+* Documentation for settings
+* ML strategy utils
+* 'walk_forward' mode utils
 * Communication module with Darwinex: https://github.com/darwinex/dwx-zeromq-connector/
-+ Communication module with IB
-* PyMC3 utils
-* Implement Sortino Ratio like a new analyzer on Backtrader.
+* Communication module with IB
+* PyMC3 strategy utils
+* Implement Sortino Ratio like a new analyzer on Backtrader: https://backtest-rookies.com/2017/11/08/backtrader-creating-analyzers/
 * pep8 linter(flake8)
 * codecov
