@@ -6,7 +6,7 @@ from strategies import (Aberration,
 
 
 CONFIG = {
-    'mode': 'optimization', # 'backtest', 'optimization', 'walk_forward'
+    'mode': 'backtest', # 'backtest', 'optimization', 'walk_forward'
     'plot': True,
     'init_date': datetime(2011, 1, 1),
     'end_date': datetime(2013, 12, 31),
@@ -17,11 +17,11 @@ CONFIG = {
     'size': 500,
     'log': False,
     'take_profit': {
-        'enabled': True,
+        'enabled': False,
         'value': 0.01,
     },
     'stop_loss': {
-        'enabled': True,
+        'enabled': False,
         'value': 0.02,
     },
     'strategies': [ # One or more strategies to run

@@ -26,6 +26,7 @@ settings.CONFIG.
 # TODO:
 
 * Documentation for settings
+* Improve 'optimization' mode: https://backtest-rookies.com/2017/06/26/optimize-strategies-backtrader/ (code 3)
 * ML strategy utils
 * 'walk_forward' mode utils
 * Communication module with Darwinex: https://github.com/darwinex/dwx-zeromq-connector/
@@ -34,3 +35,10 @@ settings.CONFIG.
 * Implement Sortino Ratio like a new analyzer on Backtrader: https://backtest-rookies.com/2017/11/08/backtrader-creating-analyzers/
 * pep8 linter(flake8)
 * codecov
+
+# DONE:
+
+* Abstract strategy/settings definition
+* Output
+* Mode Backtest / Optimization
+* Some example strategies
