@@ -49,9 +49,6 @@ class AberrationSideway(Strategy):
         if self.dataclose > self.bband.lines.mid and not self.position and self.redline:
             self.buy()
 
-        if self.dataclose > self.bband.lines.top and not self.position:
-            self.buy()
-
         if self.dataclose < self.bband.lines.mid and self.position and self.blueline:
             self.sell()
             self.blueline = False
