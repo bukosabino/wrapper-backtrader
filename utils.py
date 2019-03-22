@@ -88,7 +88,7 @@ def _show_analyzers_end(strats):
     print('Time Drawdown: ' + str(strats.analyzers.time_drawdown.get_analysis()))
     print('Annual Return: ' + str(strats.analyzers.annual_return.get_analysis()))
     # print('TradeAnalyzer: ' + str(strats.analyzers.trade_analyzer.get_analysis()))
-    _printTradeAnalysis(strats.analyzers.trade_analyzer.get_analysis())
+    # _printTradeAnalysis(strats.analyzers.trade_analyzer.get_analysis())
 
     # print('Calmar: ' + str(strats.analyzers.calmar.get_analysis()))
     # print('Log Returns Rolling: ' + str(strats.analyzers.log_returns_rolling.get_analysis()))
