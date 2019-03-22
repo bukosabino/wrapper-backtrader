@@ -7,6 +7,8 @@ Also, you can find some example strategies implemented.
 # How to use (python 3.7)
 
 ```sh
+$ git clone https://github.com/bukosabino/wrapper-backtrader.git
+$ cd wrapper-backtrader
 $ virtualenv -p python3.7 env
 $ source env/bin/activate
 $ pip install -r requirements.txt
