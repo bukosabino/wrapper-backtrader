@@ -25,8 +25,8 @@ class AberrationSideway(Strategy):
 
         # Add a BBand indicator
         self.bband = bt.indicators.BBands(self.datas[0],
-                                          period=self.p.period,
-                                          devfactor=self.p.devfactor)
+                                          period=self.params.period,
+                                          devfactor=self.params.devfactor)
 
         super(AberrationSideway, self).__init__()
 
@@ -56,3 +56,9 @@ class AberrationSideway(Strategy):
             self.sell()
             self.blueline = False
             self.redline = False
+
+    def stop(self):
+        from settings import CONFIG
+        pnl = round(self.broker.getvalue() - CONFIG['capital_base'], 2)
+        print('AberrationSideway Period: {} Final PnL: {}'.format(
+            self.params.period, pnl))

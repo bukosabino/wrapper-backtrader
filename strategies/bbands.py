@@ -15,8 +15,8 @@ class Aberration(Strategy):
     def __init__(self):
         # Add a BBand indicator
         self.bband = bt.indicators.BBands(self.datas[0],
-                                          period=self.p.period,
-                                          devfactor=self.p.devfactor)
+                                          period=self.params.period,
+                                          devfactor=self.params.devfactor)
         super(Aberration, self).__init__()
 
     def next(self):
@@ -34,3 +34,9 @@ class Aberration(Strategy):
 
         if self.dataclose > self.bband.lines.top and self.position:
             self.sell()
+
+    def stop(self):
+        from settings import CONFIG
+        pnl = round(self.broker.getvalue() - CONFIG['capital_base'], 2)
+        print('Aberration Period: {} Final PnL: {}'.format(
+            self.params.period, pnl))

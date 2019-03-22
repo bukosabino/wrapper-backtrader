@@ -11,8 +11,15 @@ data = bt.feeds.YahooFinanceData(dataname=CONFIG['asset'],
                                  todate=CONFIG['end_date'])
 cerebro.adddata(data)
 
-for strat in CONFIG['strategy']:
-    cerebro.addstrategy(strat)
+if CONFIG['mode'] == 'optimization':
+    # Parameters Optimization
+    for strat in CONFIG['strategies']:
+        cerebro.optstrategy(strat, period=range(14,21))
+elif CONFIG['mode'] == 'backtest':
+    for strat in CONFIG['strategies']:
+        cerebro.addstrategy(strat)
+else:
+    raise ValueError('CONFIG["mode"] value should be "backtest", "optimization" or "walk_forward".')
 
 # Analyzer
 cerebro = add_analyzers(cerebro)
@@ -29,5 +36,6 @@ cerebro.broker.setcommission(commission=CONFIG['commission'])
 # Run Strategy
 strats = run_strategy(cerebro)
 
-# Plot the result
-cerebro.plot()
+if CONFIG['plot'] and CONFIG['mode'] != 'optimization':
+    # Plot the result
+    cerebro.plot()
