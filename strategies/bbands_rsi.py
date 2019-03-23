@@ -18,10 +18,10 @@ class Aberration_RSI(Strategy):
                                           period=self.params.period,
                                           devfactor=self.params.devfactor)
         self.rsi = bt.indicators.RSI_SMA(self.data.close, period=self.params.period)
-        super(Aberration, self).__init__()
+        super(Aberration_RSI, self).__init__()
 
     def next(self):
-        super(Aberration, self).next()
+        super(Aberration_RSI, self).next()
 
         # Check if an order is pending ... if yes, we cannot send a 2nd one
         if self.order:

@@ -25,6 +25,23 @@ this strategy in strategies/__init__.py
 After, you can use your strategy on the parameter 'strategy' in settings.CONFIG.
 
 
+# Guide: Step by step
+
+Estrategia a definir: Cruce de medias (SMA).
+
+1 - Escribimos nuestra estrategia en un fichero python situado en la carpeta `strategies`.
+
+2 - Importamos nuestra estrategia en `strategies.__init__.py`. Ejemplo:
+
+from .nombre_fichero import NombreEstrategia
+
+3 - En el `settings.py` modificamos la variable CONFIG['strategies'] para añadir nuestra estrategia.
+
+4 - Ejecutamos el wrapper mediante:
+
+python run.py
+
+
 # TODO:
 
 * Documentation for settings
