@@ -9,8 +9,6 @@ Also, you can find some example strategies implemented.
 ```sh
 $ git clone https://github.com/bukosabino/wrapper-backtrader.git
 $ cd wrapper-backtrader
-$ virtualenv -p python3.7 env
-$ source env/bin/activate
 $ pip install -r requirements.txt
 $ python run.py
 ```
